@@ -1,5 +1,10 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
 namespace BlazorApp.Data;
 
+[Authorize(Roles = "Administrators, Operations")]
+[ApiController]
 public class WeatherForecastService
 {
     private static readonly string[] Summaries = new[]
